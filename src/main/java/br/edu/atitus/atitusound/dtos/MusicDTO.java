@@ -5,7 +5,7 @@ import java.time.Duration;
 public class MusicDTO {
 
 	private String name;
-	private Duration durantion;
+	private Duration duration;
 	private String url;
 	private ArtistOnlyUUID artist;
 	
@@ -15,11 +15,11 @@ public class MusicDTO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Duration getDurantion() {
-		return durantion;
+	public Duration getDuration() {
+		return duration;
 	}
-	public void setDurantion(Duration durantion) {
-		this.durantion = durantion;
+	public void setDuration(Duration duration) {
+		this.duration = duration;
 	}
 	public String getUrl() {
 		return url;
@@ -32,7 +32,8 @@ public class MusicDTO {
 	}
 	public void setArtist(ArtistOnlyUUID artist) {
 		this.artist = artist;
-	}
+	}    
+
 	
 	
 }

@@ -9,7 +9,7 @@ import br.edu.atitus.atitusound.services.GenericService;
 import br.edu.atitus.atitusound.services.PlaylistService;
 
 @RestController
-@RequestMapping("/playlist")
+@RequestMapping("/playlists")
 public class PlaylistController extends GenericController<PlaylistEntity, PlaylistDTO>{
 
 	private final PlaylistService service;
