@@ -10,7 +10,7 @@ import br.edu.atitus.atitusound.services.PlaylistService;
 
 @RestController
 @RequestMapping("/playlists")
-public class PlaylistController extends GenericController<PlaylistEntity, PlaylistDTO>{
+public class PlaylistController extends GenericController<PlaylistEntity, PlaylistDTO> {
 
 	private final PlaylistService service;
 	
@@ -18,21 +18,18 @@ public class PlaylistController extends GenericController<PlaylistEntity, Playli
 		super();
 		this.service = service;
 	}
-	
+
 	@Override
-	public GenericService<PlaylistEntity> getService() {
+	protected GenericService<PlaylistEntity> getService() {
 		return service;
 	}
 
 	@Override
 	protected PlaylistEntity convertDTO2Entity(PlaylistDTO dto) {
-		PlaylistEntity entidade = new PlaylistEntity();
-		
-		entidade.setName(dto.getName());
-		entidade.setPublic_share(dto.getPublic_share());
-		
-		return entidade;
+		PlaylistEntity playlist = new PlaylistEntity();
+		playlist.setName(dto.getName());
+		playlist.setPublic_share(dto.getPublic_share());
+		return playlist;
 	}
 
-	
 }
